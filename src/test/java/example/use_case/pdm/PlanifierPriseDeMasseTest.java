@@ -27,12 +27,16 @@ class PlanifierPriseDeMasseTest {
         AlimentsDAO alimentsDAO = new Aliments();
         ExercicesDAO exercicesDAO = new Exercices();
 
-        DonneesUtilisateur donneesUtilisateur = new DonneesUtilisateur(80, 1.80, 20, List.of(AlimentType.fruitsSecs));
+        DonneesUtilisateur donneesUtilisateur = new DonneesUtilisateur(POIDS, TAILLE, AGE, List.of(AlimentType.fruitsSecs));
 
         //When
         Programme programme = new PlanifierPDM(donneesUtilisateur,alimentsDAO, exercicesDAO).appliquer();
 
         //Then
         Assertions.assertNotNull(programme);
+        Assertions.assertEquals(2, programme.getAliments().size());
+        Assertions.assertEquals(3, programme.getExercices().size());
+        Assertions.assertEquals(1, programme.getAllergies().size());
+        Assertions.assertEquals(AlimentType.fruitsSecs, programme.getAllergies().get(0));
     }
 }
