@@ -1,11 +1,5 @@
 package org.example;
 
-import org.example.domain.model.*;
-import org.example.model.*;
-import org.example.use_case.pdm.PlanifierPDM;
-
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
 
