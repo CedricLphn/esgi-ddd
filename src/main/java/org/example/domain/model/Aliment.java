@@ -3,6 +3,7 @@ package org.example.model;
 import java.util.Objects;
 
 public class Aliment {
+    private final AlimentId alimentId;
     private final String nom;
     private final int proteines;
     private final int glucides;
