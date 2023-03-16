@@ -1,4 +1,4 @@
-package org.example.domain.model;
+package org.example.domain.vo;
 
 import java.util.Objects;
 import java.util.UUID;

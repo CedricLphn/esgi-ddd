@@ -1,10 +1,10 @@
-package org.example;
+package org.example.use_case.pdm;
 
-import org.example.domain.model.AlimentType;
+import org.example.domain.enums.AlimentType;
 
 import java.util.List;
 
-public class DonneesUtilisateur {
+public class DonneesUtilisateurDTO {
     private final double poids;
     private final double taille;
     private final int age;
@@ -13,7 +13,7 @@ public class DonneesUtilisateur {
 
 
 
-    public DonneesUtilisateur(double poids, double taille, int age, List<AlimentType> allergies) {
+    public DonneesUtilisateurDTO(double poids, double taille, int age, List<AlimentType> allergies) {
         this.poids = poids;
         this.taille = taille;
         this.age = age;

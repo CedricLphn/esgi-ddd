@@ -1,4 +1,7 @@
-package org.example.domain.model;
+package org.example.domain.entity;
+
+import org.example.domain.vo.ExerciceId;
+import org.example.domain.enums.ExerciceType;
 
 public class Exercice {
 

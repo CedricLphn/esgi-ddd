@@ -1,6 +1,8 @@
-package org.example.domain.model;
+package org.example.domain.entity;
 
-import java.util.Objects;
+import org.example.domain.enums.AlimentType;
+import org.example.domain.enums.RegimeType;
+import org.example.domain.vo.AlimentId;
 
 public class Aliment {
     private final AlimentId alimentId;
@@ -42,16 +44,4 @@ public class Aliment {
         return regimeType;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Aliment aliment = (Aliment) o;
-        return proteines == aliment.proteines && glucides == aliment.glucides && lipides == aliment.lipides && Objects.equals(alimentId, aliment.alimentId) && Objects.equals(nom, aliment.nom) && regimeType == aliment.regimeType && alimentType == aliment.alimentType;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(alimentId, nom, proteines, glucides, lipides, regimeType, alimentType);
-    }
 }

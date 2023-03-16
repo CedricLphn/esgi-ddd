@@ -1,8 +1,9 @@
-package org.example.infrastructure;
+package org.example.infrastructure.adapters;
 
-import org.example.domain.model.Exercice;
-import org.example.domain.model.ExerciceId;
-import org.example.domain.model.ExerciceType;
+import org.example.domain.ports.ExercicesDAO;
+import org.example.domain.entity.Exercice;
+import org.example.domain.vo.ExerciceId;
+import org.example.domain.enums.ExerciceType;
 
 import java.util.List;
 

@@ -1,4 +1,7 @@
-package org.example.domain.model;
+package org.example.domain.entity;
+
+import org.example.domain.enums.AlimentType;
+import org.example.domain.vo.Bulking;
 
 import java.util.List;
 

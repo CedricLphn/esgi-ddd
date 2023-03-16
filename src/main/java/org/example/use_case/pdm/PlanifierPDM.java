@@ -1,19 +1,22 @@
 package org.example.use_case.pdm;
 
-import org.example.DonneesUtilisateur;
-import org.example.domain.model.*;
-import org.example.infrastructure.AlimentsDAO;
-import org.example.infrastructure.ExercicesDAO;
+import org.example.domain.entity.Programme;
+import org.example.domain.enums.ExerciceType;
+import org.example.domain.enums.RegimeType;
+import org.example.domain.vo.BaseMetabolicRate;
+import org.example.domain.vo.Bulking;
+import org.example.domain.ports.AlimentsDAO;
+import org.example.domain.ports.ExercicesDAO;
 
 public class PlanifierPDM {
 
-    private final DonneesUtilisateur donneesUtilisateur;
+    private final DonneesUtilisateurDTO donneesUtilisateur;
 
     private final AlimentsDAO alimentsDAO;
 
     private final ExercicesDAO exercicesDAO;
 
-    public PlanifierPDM( DonneesUtilisateur donneesUtilisateur, AlimentsDAO aliments, ExercicesDAO exercices) {
+    public PlanifierPDM(DonneesUtilisateurDTO donneesUtilisateur, AlimentsDAO aliments, ExercicesDAO exercices) {
         this.donneesUtilisateur = donneesUtilisateur;
         this.alimentsDAO = aliments;
         this.exercicesDAO = exercices;

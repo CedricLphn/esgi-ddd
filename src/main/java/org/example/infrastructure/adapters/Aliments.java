@@ -1,9 +1,10 @@
-package org.example.infrastructure;
+package org.example.infrastructure.adapters;
 
-import org.example.domain.model.Aliment;
-import org.example.domain.model.AlimentId;
-import org.example.domain.model.AlimentType;
-import org.example.domain.model.RegimeType;
+import org.example.domain.ports.AlimentsDAO;
+import org.example.domain.entity.Aliment;
+import org.example.domain.vo.AlimentId;
+import org.example.domain.enums.AlimentType;
+import org.example.domain.enums.RegimeType;
 
 import java.util.List;
 

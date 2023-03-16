@@ -1,4 +1,4 @@
-package org.example.domain.model;
+package org.example.domain.enums;
 
 public enum AlimentType {
     fruitsSecs, aucun

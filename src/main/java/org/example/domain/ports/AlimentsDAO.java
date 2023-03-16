@@ -1,6 +1,6 @@
-package org.example.infrastructure;
+package org.example.domain.ports;
 
-import org.example.domain.model.Aliment;
+import org.example.domain.entity.Aliment;
 
 import java.util.List;
 
