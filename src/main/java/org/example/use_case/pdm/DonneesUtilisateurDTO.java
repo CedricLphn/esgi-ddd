@@ -1,6 +1,5 @@
 package org.example.use_case.pdm;
 
-import org.example.domain.enums.AlimentType;
 
 import java.util.List;
 
@@ -11,13 +10,16 @@ public class DonneesUtilisateurDTO {
 
     private final List<String> allergies;
 
+    private final Frequence frequence;
 
 
-    public DonneesUtilisateurDTO(double poids, double taille, int age, List<String> allergies) {
+
+    public DonneesUtilisateurDTO(double poids, double taille, int age, List<String> allergies, int frequence) {
         this.poids = poids;
         this.taille = taille;
         this.age = age;
         this.allergies = allergies;
+        this.frequence = frequence;
     }
 
     public double obtenirPoids() {

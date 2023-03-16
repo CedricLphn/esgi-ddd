@@ -33,7 +33,7 @@ class PlanifierPriseDeMasseTest {
         ExercicesDAO exercicesDAO = new Exercices();
         ProgrammeService programmeService = new SimpleProgramme(alimentsDAO, exercicesDAO);
 
-        DonneesUtilisateurDTO donneesUtilisateur = new DonneesUtilisateurDTO(POIDS, TAILLE, AGE, List.of("fruitsSecs"));
+        DonneesUtilisateurDTO donneesUtilisateur = new DonneesUtilisateurDTO(POIDS, TAILLE, AGE, List.of("fruitsSecs"), 3);
 
         //When
         Programme programme = new PlanifierPDM(donneesUtilisateur, programmeService).appliquer();
@@ -56,7 +56,7 @@ class PlanifierPriseDeMasseTest {
         ProgrammeService programmeService = new SimpleProgramme(alimentsDAO, exercicesDAO);
 
 
-        DonneesUtilisateurDTO donneesUtilisateur = new DonneesUtilisateurDTO(POIDS, TAILLE, AGE, List.of("aucun"));
+        DonneesUtilisateurDTO donneesUtilisateur = new DonneesUtilisateurDTO(POIDS, TAILLE, AGE, List.of("aucun"), 5);
 
         //When
         Programme programme = new PlanifierPDM(donneesUtilisateur, programmeService).appliquer();
