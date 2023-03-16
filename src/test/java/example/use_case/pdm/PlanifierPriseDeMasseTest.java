@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class PlanifierPDMTest {
+public class PlanifierPriseDeMasseTest {
 
 
     @DisplayName("Devrait planifier un programme avec un objectif prise de masse.")
