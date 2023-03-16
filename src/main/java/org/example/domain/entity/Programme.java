@@ -12,7 +12,7 @@ public class Programme {
     List<AlimentType> allergies;
     Bulking bulking;
 
-    private Programme() {
+    public Programme() {
     }
 
     public static Programme creer(List<Aliment> aliments, List<Exercice> exercices, List<AlimentType> allergies, Bulking bulk){
@@ -21,7 +21,6 @@ public class Programme {
         prog.setExercices(exercices);
         prog.setAllergies(allergies);
         prog.setBulking(bulk);
-
         return prog;
     }
 

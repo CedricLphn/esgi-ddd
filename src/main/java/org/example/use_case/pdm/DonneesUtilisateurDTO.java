@@ -9,11 +9,11 @@ public class DonneesUtilisateurDTO {
     private final double taille;
     private final int age;
 
-    private final List<AlimentType> allergies;
+    private final List<String> allergies;
 
 
 
-    public DonneesUtilisateurDTO(double poids, double taille, int age, List<AlimentType> allergies) {
+    public DonneesUtilisateurDTO(double poids, double taille, int age, List<String> allergies) {
         this.poids = poids;
         this.taille = taille;
         this.age = age;
@@ -32,7 +32,7 @@ public class DonneesUtilisateurDTO {
         return age;
     }
 
-    public List<AlimentType> getAllergies() {
+    public List<String> getAllergies() {
         return allergies;
     }
 }

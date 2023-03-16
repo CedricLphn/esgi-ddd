@@ -23,6 +23,21 @@ public class Aliment {
         this.alimentType = alimentType;
     }
 
+    public Boolean estRegimeStrict(){
+        return this.regimeType.equals(RegimeType.STRICT);
+    }
+
+    public Boolean estRegimeModere(){
+        return this.regimeType.equals(RegimeType.MODEREE);
+    }
+
+    public String getTotalCalories(){
+        var proteineCalories = proteines * 4;
+        var glucideCalories = glucides * 4;
+        var lipideCalories = lipides * 9;
+        return String.valueOf(proteineCalories + glucideCalories + lipideCalories);
+    }
+
 
     public String getNom() {
         return nom;

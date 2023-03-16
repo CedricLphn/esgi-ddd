@@ -15,6 +15,14 @@ public class Exercice {
         this.exerciceType = exerciceType;
     }
 
+    public Boolean estPdm(){
+        return this.exerciceType.equals(ExerciceType.pdm);
+    }
+
+    public Boolean estSeche(){
+        return this.exerciceType.equals(ExerciceType.seche);
+    }
+
     public ExerciceId getId() {
         return id;
     }
