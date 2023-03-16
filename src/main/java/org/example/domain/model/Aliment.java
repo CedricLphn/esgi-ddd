@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.domain.model;
 
 import java.util.Objects;
 
@@ -11,7 +11,8 @@ public class Aliment {
     private final RegimeType regimeType;
     private final AlimentType alimentType;
 
-    public Aliment(String nom, int proteines, int glucides, int lipides, RegimeType regimeType, AlimentType alimentType) {
+    public Aliment(AlimentId alimentId, String nom, int proteines, int glucides, int lipides, RegimeType regimeType, AlimentType alimentType) {
+        this.alimentId = alimentId;
         this.nom = nom;
         this.proteines = proteines;
         this.glucides = glucides;
@@ -19,6 +20,7 @@ public class Aliment {
         this.regimeType = regimeType;
         this.alimentType = alimentType;
     }
+
 
     public String getNom() {
         return nom;
@@ -45,11 +47,11 @@ public class Aliment {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Aliment aliment = (Aliment) o;
-        return proteines == aliment.proteines && glucides == aliment.glucides && lipides == aliment.lipides && nom.equals(aliment.nom) && regimeType == aliment.regimeType;
+        return proteines == aliment.proteines && glucides == aliment.glucides && lipides == aliment.lipides && Objects.equals(alimentId, aliment.alimentId) && Objects.equals(nom, aliment.nom) && regimeType == aliment.regimeType && alimentType == aliment.alimentType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nom, proteines, glucides, lipides, regimeType);
+        return Objects.hash(alimentId, nom, proteines, glucides, lipides, regimeType, alimentType);
     }
 }

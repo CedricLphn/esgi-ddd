@@ -1,7 +1,7 @@
 package org.example.use_case.pdm;
 
 import org.example.DonneesUtilisateur;
-import org.example.model.*;
+import org.example.domain.model.*;
 
 import java.util.List;
 

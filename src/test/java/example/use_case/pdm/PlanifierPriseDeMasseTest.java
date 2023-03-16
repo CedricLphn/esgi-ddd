@@ -1,6 +1,7 @@
 package example.use_case.pdm;
 
 import org.example.DonneesUtilisateur;
+import org.example.domain.model.*;
 import org.example.model.*;
 import org.example.use_case.pdm.PlanifierPDM;
 import org.junit.jupiter.api.Assertions;

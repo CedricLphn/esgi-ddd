@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.model.AlimentType;
+import org.example.domain.model.AlimentType;
 
 import java.util.List;
 
