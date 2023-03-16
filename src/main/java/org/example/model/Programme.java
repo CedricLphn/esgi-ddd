@@ -8,18 +8,27 @@ public class Programme {
     List<Aliment> aliments;
     List<Exercice> exercices;
     List<AlimentType> allergies;
-    double calories;
+    Bulking bulking;
 
     private Programme() {
     }
 
-    public static Programme creer(List<Aliment> aliments, List<Exercice> exercices, List<AlimentType> allergies, double calories){
+    public static Programme creer(List<Aliment> aliments, List<Exercice> exercices, List<AlimentType> allergies, Bulking bulk){
         var prog = new Programme();
         prog.setAliments(aliments);
-        prog.setCalories(calories);
         prog.setExercices(exercices);
         prog.setAllergies(allergies);
+        prog.setBulking(bulk);
+
         return prog;
+    }
+
+    public Bulking getBulking() {
+        return bulking;
+    }
+
+    public void setBulking(Bulking bulking) {
+        this.bulking = bulking;
     }
 
     public List<Aliment> getAliments() {
@@ -28,14 +37,6 @@ public class Programme {
 
     public void setAliments(List<Aliment> aliments) {
         this.aliments = aliments;
-    }
-
-    public double getCalories() {
-        return calories;
-    }
-
-    public void setCalories(double calories) {
-        this.calories = calories;
     }
 
     public List<Exercice> getExercices() {
