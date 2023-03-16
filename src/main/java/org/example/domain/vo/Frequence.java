@@ -1,26 +1,22 @@
 package org.example.domain.vo;
 
-import org.example.domain.exceptions.BulkingException;
+import org.example.domain.exceptions.FrequenceException;
 
 import java.util.Objects;
 
-public class Bulking {
+public class Frequence {
 
-    private final BaseMetabolicRate bmr;
-    private final double value;
+    private final int value;
 
-    public Bulking(BaseMetabolicRate bmr) throws BulkingException {
-        if(Objects.isNull(bmr.getBmr())){
-            throw new BulkingException("bmr cannot be null");
+    public Frequence(int value) throws FrequenceException {
+        if(value < 1 || value > 7) {
+            throw new FrequenceException("la frequence doit etre comprise entre 1 et 7.");
         }
-        this.bmr = bmr;
-        this.value = bmr.getBmr() + 200;
-    }
-    public BaseMetabolicRate getBmr() {
-        return bmr;
+
+        this.value = value;
     }
 
-    public double getValue() {
+    public int getValue() {
         return value;
     }
 
@@ -28,12 +24,12 @@ public class Bulking {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Bulking bulking = (Bulking) o;
-        return Double.compare(bulking.value, value) == 0 && Objects.equals(bmr, bulking.bmr);
+        Frequence frequence = (Frequence) o;
+        return value == frequence.value;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(bmr, value);
+        return Objects.hash(value);
     }
 }

@@ -1,6 +1,8 @@
 package org.example.use_case.pdm;
 
 
+import org.example.domain.vo.Frequence;
+
 import java.util.List;
 
 public class DonneesUtilisateurDTO {
@@ -14,7 +16,7 @@ public class DonneesUtilisateurDTO {
 
 
 
-    public DonneesUtilisateurDTO(double poids, double taille, int age, List<String> allergies, int frequence) {
+    public DonneesUtilisateurDTO(double poids, double taille, int age, List<String> allergies, Frequence frequence) {
         this.poids = poids;
         this.taille = taille;
         this.age = age;
@@ -36,5 +38,9 @@ public class DonneesUtilisateurDTO {
 
     public List<String> getAllergies() {
         return allergies;
+    }
+
+    public Frequence obtenirFrequence() {
+        return frequence;
     }
 }

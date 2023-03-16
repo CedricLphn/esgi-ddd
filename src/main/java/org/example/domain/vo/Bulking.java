@@ -10,8 +10,8 @@ public class Bulking {
     private final double value;
 
     public Bulking(BaseMetabolicRate bmr) throws BulkingException {
-        if(Objects.isNull(bmr.getBmr())){
-            throw new BulkingException("bmr cannot be null");
+        if(bmr.getBmr() < 1000){
+            throw new BulkingException("bmr doit etre inferieur a 3000");
         }
         this.bmr = bmr;
         this.value = bmr.getBmr() + 200;

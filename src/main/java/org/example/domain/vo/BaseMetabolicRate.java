@@ -6,15 +6,15 @@ import java.util.Objects;
 
 public class BaseMetabolicRate {
 
-    private final double value;
+    private final Double value;
 
-    public BaseMetabolicRate(double poids, double taille, int age) throws BaseMetabolicRateException {
+    public BaseMetabolicRate(Double poids, Double taille, int age) throws BaseMetabolicRateException {
         if(age < 16 || poids < 40){
             throw new BaseMetabolicRateException("L'âge doit être supérieur à 16 ans et le poids supérieur à 40 kg");
         }
         this.value = 66.5 + (13.75 * poids) + (5.003 * taille) - (6.75 * age);
     }
-    public double getBmr() {
+    public Double getBmr() {
         return value;
     }
 
