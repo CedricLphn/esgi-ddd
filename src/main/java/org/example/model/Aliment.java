@@ -8,13 +8,15 @@ public class Aliment {
     private final int glucides;
     private final int lipides;
     private final RegimeType regimeType;
+    private final AlimentType alimentType;
 
-    public Aliment(String nom, int proteines, int glucides, int lipides, RegimeType regimeType) {
+    public Aliment(String nom, int proteines, int glucides, int lipides, RegimeType regimeType, AlimentType alimentType) {
         this.nom = nom;
         this.proteines = proteines;
         this.glucides = glucides;
         this.lipides = lipides;
         this.regimeType = regimeType;
+        this.alimentType = alimentType;
     }
 
     public String getNom() {

@@ -6,15 +6,19 @@ import java.util.Objects;
 public class Programme {
 
     List<Aliment> aliments;
+    List<Exercice> exercices;
+    List<AlimentType> allergies;
     double calories;
 
     private Programme() {
     }
 
-    public static Programme creer(List<Aliment> aliments, double calories){
+    public static Programme creer(List<Aliment> aliments, List<Exercice> exercices, List<AlimentType> allergies, double calories){
         var prog = new Programme();
         prog.setAliments(aliments);
         prog.setCalories(calories);
+        prog.setExercices(exercices);
+        prog.setAllergies(allergies);
         return prog;
     }
 
@@ -34,24 +38,19 @@ public class Programme {
         this.calories = calories;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Programme programme = (Programme) o;
-        return Double.compare(programme.calories, calories) == 0 && Objects.equals(aliments, programme.aliments);
+    public List<Exercice> getExercices() {
+        return exercices;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(aliments, calories);
+    public void setExercices(List<Exercice> exercices) {
+        this.exercices = exercices;
     }
 
-    @Override
-    public String toString() {
-        return "Programme{" +
-                "aliments=" + aliments +
-                ", calories=" + calories +
-                '}';
+    public List<AlimentType> getAllergies() {
+        return allergies;
+    }
+
+    public void setAllergies(List<AlimentType> allergies) {
+        this.allergies = allergies;
     }
 }

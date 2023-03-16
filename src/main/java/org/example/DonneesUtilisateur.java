@@ -1,14 +1,23 @@
-package org.example.model;
+package org.example;
+
+import org.example.model.AlimentType;
+
+import java.util.List;
 
 public class DonneesUtilisateur {
     private final double poids;
     private final double taille;
     private final int age;
 
-    public DonneesUtilisateur(double poids, double taille, int age) {
+    private final List<AlimentType> allergies;
+
+
+
+    public DonneesUtilisateur(double poids, double taille, int age, List<AlimentType> allergies) {
         this.poids = poids;
         this.taille = taille;
         this.age = age;
+        this.allergies = allergies;
     }
 
     public double obtenirPoids() {
@@ -21,5 +30,9 @@ public class DonneesUtilisateur {
 
     public int obtenirAge() {
         return age;
+    }
+
+    public List<AlimentType> getAllergies() {
+        return allergies;
     }
 }

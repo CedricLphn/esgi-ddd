@@ -1,5 +1,7 @@
 package org.example.model;
 
+import org.example.DonneesUtilisateur;
+
 public class BaseMetabolicRate {
 
     private DonneesUtilisateur donneesUtilisateur;

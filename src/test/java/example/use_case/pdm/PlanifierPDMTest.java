@@ -1,13 +1,21 @@
-package org.example;
+package example.use_case.pdm;
 
+import org.example.DonneesUtilisateur;
 import org.example.model.*;
 import org.example.use_case.pdm.PlanifierPDM;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class Main {
-    public static void main(String[] args) {
+public class PlanifierPDMTest {
 
+
+    @DisplayName("Devrait planifier un programme avec un objectif prise de masse.")
+    @Test
+    void planifier_programme_prise_de_masse(){
+        //Given
         List<Aliment> aliments = List.of(
                 new Aliment("Banane", 5, 10, 1, RegimeType.MODEREE, AlimentType.aucun),
                 new Aliment("Cacahuètes", 5, 10, 1, RegimeType.MODEREE, AlimentType.fruitsSecs),
@@ -24,6 +32,10 @@ public class Main {
 
         DonneesUtilisateur donneesUtilisateur = new DonneesUtilisateur(80, 1.80, 20, List.of(AlimentType.fruitsSecs));
 
+        //When
         Programme programme = new PlanifierPDM(aliments, exercices, donneesUtilisateur).appliquer();
+
+        //Then
+        Assertions.assertNotNull(programme);
     }
 }
