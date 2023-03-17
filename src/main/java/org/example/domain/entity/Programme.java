@@ -2,22 +2,31 @@ package org.example.domain.entity;
 
 import org.example.domain.enums.AlimentType;
 import org.example.domain.vo.Bulking;
+import org.example.domain.vo.ProgrammeId;
 import shared.allergie.Allergie;
 
 import java.util.List;
 
 public class Programme {
 
-    final Allergie allergie = new Allergie();
+    ProgrammeId programmeId;
+    Allergie allergie;
     List<Aliment> aliments;
     List<Exercice> exercices;
+
+    public void setProgrammeId(ProgrammeId programmeId) {
+        this.programmeId = programmeId;
+    }
+
     Bulking bulking;
 
     public Programme() {
     }
 
-    public static Programme creer(List<Aliment> aliments, List<Exercice> exercices, List<AlimentType> allergies, Bulking bulk){
+    public static Programme creer(ProgrammeId id ,List<Aliment> aliments, List<Exercice> exercices, List<AlimentType> allergies, Bulking bulk){
+
         var prog = new Programme();
+        prog.setProgrammeId(id);
         prog.setAliments(aliments);
         prog.setExercices(exercices);
         prog.setAllergies(allergies);
@@ -54,6 +63,6 @@ public class Programme {
     }
 
     public void setAllergies(List<AlimentType> allergies) {
-        this.allergie.setAllergies(allergies);
+        allergie = new Allergie(allergies);
     }
 }

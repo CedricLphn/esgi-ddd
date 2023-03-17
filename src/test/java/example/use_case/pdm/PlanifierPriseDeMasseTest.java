@@ -7,6 +7,7 @@ import org.example.domain.ports.ProgrammeService;
 import org.example.domain.service.SimpleProgramme;
 import org.example.domain.vo.BaseMetabolicRate;
 import org.example.domain.vo.Bulking;
+import org.example.domain.vo.ProgrammeId;
 import shared.frequence.Frequence;
 import org.example.use_case.pdm.DonneesUtilisateurDTO;
 import org.example.domain.entity.Programme;
@@ -101,7 +102,7 @@ class PlanifierPriseDeMasseTest {
 
 
         BaseMetabolicRateException exception = Assertions.assertThrows(BaseMetabolicRateException.class, () -> {
-            Programme programme = Programme.creer(List.of(), List.of(), List.of(), new Bulking(new BaseMetabolicRate(20d, 13d, 13)));
+            Programme programme = Programme.creer(new ProgrammeId() ,List.of(), List.of(), List.of(), new Bulking(new BaseMetabolicRate(20d, 13d, 13)));
         });
 
         Assertions.assertEquals("L'âge doit être supérieur à 16 ans et le poids supérieur à 40 kg", exception.getMessage());

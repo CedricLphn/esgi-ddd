@@ -9,6 +9,7 @@ import org.example.domain.ports.ExercicesDAO;
 import org.example.domain.ports.ProgrammeService;
 import org.example.domain.vo.BaseMetabolicRate;
 import org.example.domain.vo.Bulking;
+import org.example.domain.vo.ProgrammeId;
 
 import java.util.List;
 
@@ -30,6 +31,6 @@ public class SimpleProgramme implements ProgrammeService {
         var exercisesUtilisateur = exercicesDAO.obtenirTout().stream().filter(exercice -> exercice.estPdm()).toList();
         var bulking = new Bulking(new BaseMetabolicRate(poids, taille, age));
         var lesAllergies = allergies.stream().map(allergie -> AlimentType.valueOf(allergie)).toList();
-        return Programme.creer(alimentsUtilisateur, exercisesUtilisateur, lesAllergies, bulking);
+        return Programme.creer(new ProgrammeId() ,alimentsUtilisateur, exercisesUtilisateur, lesAllergies, bulking);
     }
 }
