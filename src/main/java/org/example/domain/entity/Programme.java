@@ -2,14 +2,15 @@ package org.example.domain.entity;
 
 import org.example.domain.enums.AlimentType;
 import org.example.domain.vo.Bulking;
+import shared.allergie.Allergie;
 
 import java.util.List;
 
 public class Programme {
 
+    final Allergie allergie = new Allergie();
     List<Aliment> aliments;
     List<Exercice> exercices;
-    List<AlimentType> allergies;
     Bulking bulking;
 
     public Programme() {
@@ -49,10 +50,10 @@ public class Programme {
     }
 
     public List<AlimentType> getAllergies() {
-        return allergies;
+        return allergie.getAllergies();
     }
 
     public void setAllergies(List<AlimentType> allergies) {
-        this.allergies = allergies;
+        this.allergie.setAllergies(allergies);
     }
 }

@@ -1,4 +1,4 @@
-package org.example.domain.vo;
+package shared.frequence;
 
 import org.example.domain.exceptions.FrequenceException;
 

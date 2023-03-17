@@ -1,7 +1,7 @@
 package org.example.use_case.pdm;
 
 
-import org.example.domain.vo.Frequence;
+import shared.frequence.Frequence;
 
 import java.util.List;
 

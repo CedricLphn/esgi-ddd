@@ -7,7 +7,7 @@ import org.example.domain.ports.ProgrammeService;
 import org.example.domain.service.SimpleProgramme;
 import org.example.domain.vo.BaseMetabolicRate;
 import org.example.domain.vo.Bulking;
-import org.example.domain.vo.Frequence;
+import shared.frequence.Frequence;
 import org.example.use_case.pdm.DonneesUtilisateurDTO;
 import org.example.domain.entity.Programme;
 import org.example.domain.enums.AlimentType;
@@ -20,7 +20,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import javax.management.InvalidApplicationException;
 import java.util.List;
 
 class PlanifierPriseDeMasseTest {
